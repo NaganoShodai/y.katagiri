@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- タイトル -->
+        <title>Hello Thymeleaf</title>
+    </head>
+    <body>
+		
+		<!-- th:textでテキストの埋め込み
+		<h1 th:text="thymeleaf課題"></h1>
+		<p th:text="${'私は' + text}"></p>
+		<p th:text="${name + text}"></p>
+		<p th:text="${num < 10 ? '小さい' : '大きい'}"></p>
+		<p th:text="${text == '山田' ? '等しい' : '異なる'}"></p>
+		 -->
+		<!-- if文 
+		<p th:if="${test}"> 表示</p>
+		
+		 switch文 
+		<div th:switch="${size}">
+			<p th:case="small">Sサイズ</p>
+			<p th:case="middle">Mサイズ</p>
+			<p th:case="large">Lサイズ</p>
+			<p th:case="*">オーダーメイド</p>
+		</div>
+		
+		論理演算子 
+		<p th:if="${num2 < 10 || 2 < num}">表示する</p>
+		
+		hyクラス 
+		<p th:class="${test + 'テスト'}">test</p>
+		-->
+		<!-- リスト -->
+		<ul th:each="city : ${city_list}">
+			<li th:text="${city.countrycode}"></li>
+		</ul>
+    </body>
+</html>

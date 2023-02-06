@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- タイトル -->
+	<title>ログイン画面</title>
+	<!-- エンコード -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="'..' + @{/css/login.css}" />
+</head>
+
+<body>
+	<!--見出し-->
+	<header>
+		<h2>メールアドレスとパスワードでログイン</h2>
+	</header>
+
+	<section class="inputArea">
+		<!--フォーム-->
+		<form method="post" th:action="@{/login1}" th:object="${Login}">
+			<!--エラーメッセージ-->
+			<p th:each="message : ${Error}" class="errorMsg">[[${message}]]</p>
+			<!-- 入力欄 -->
+			<div class="textbox">
+				<input type="text" th:field="*{mail}" class="input" name="mail" placeholder="メールアドレス">
+			</div>
+			<!--メールテスト出力
+				<p th:text="${mail}" />　-->
+			<div class="textbox">
+				<input type="text" th:field="*{pass}" class="input" name="password" placeholder="パスワード">
+			</div>
+			<!--パスワードテスト出力
+				<p th:text="${password}" /> -->
+			<!--ログインボタン-->
+			<div class="buttonArea">
+				<input type="submit" value="ログイン">
+			</div>
+		</form>
+		<!--フッター-->
+		<footer>
+			<div class="footerText">
+				<a href="./login.html" class="footerLink">新規登録</a>
+			</div>
+			<div class="footerText">
+				<a href="./login.html" class="footerLink">パスワードを忘れた方はこちら</a>
+			</div>
+		</footer>
+	</section>
+</body>
+
+</html>

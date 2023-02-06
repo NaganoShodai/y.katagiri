@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- タイトル -->
+	<title>トップ画面</title>
+	<!-- エンコード -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="'..' + @{/css/logintop.css}" />
+</head>
+<form method="post" th:action="@{/logintop}" th:object="${Login}">
+
+	<body>
+		<!--見出し-->
+		<header>
+			<h2>トップ</h2>
+		</header>
+		<!--テスト-->
+		<p th:text="*{mail}" />
+		<p th:text="*{pass}" />
+	</body>
+</form>
+
+</html>

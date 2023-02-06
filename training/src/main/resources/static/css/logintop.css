@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*見出し*/
+h2{
+	background-color: #fbe5d6;
+	color: #f19b60;
+	text-align: center;
+	padding: 30px;
+	margin: 0px;
+	font-weight: normal;
+    font-size: xx-large;
+}
+
+/*bodyタグ*/
+body{
+	width: 100%;
+	background-color: #f7f7f7;
+}

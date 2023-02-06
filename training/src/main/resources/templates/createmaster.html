@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- タイトル -->
+	<title>新規登録</title>
+	<!-- エンコード -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" media="all" href="../css/createmaster.css">
+</head>
+
+<body>
+	<h2>新規登録</h2>
+	<!--フォーム-->
+	<form method="post" th:action="@{/input_master}" th:object="${Master}" class="input">
+		<section class="button_back">
+			<input type="button" onclick="history.back()" value="戻る" control-id="ControlID-1">
+		</section>
+		<!--エラーメッセージ-->
+		<p th:if="${validationError}" th:each="message : ${validationError}" class="errorMsg">[[${message}]]</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>技術名</td>
+					<!--入力-->
+					<td><input type="text" th:field="*{name}" name="name" class="text_area" control-id="ControlID-2" />
+					</td>
+				</tr>
+				<tr>
+					<td>オプション</td>
+					<!--入力-->
+					<td><input type="text" th:field="*{option_1}" name="option" class="text_area"
+							control-id="ControlID-3" /></td>
+
+				</tr>
+			</tbody>
+		</table>
+		<section class="button_save">
+			<input type="submit" value="保存" control-id="ControlID-4">
+		</section>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*見出し*/
+h2{
+	background-color: #f19d64;
+	color: #ffffff;
+	text-align: center;
+	padding: 30px;
+	margin: 0px;
+	font-weight: normal;
+}
+
+/*bodyタグ*/
+body{
+	width: 100%;
+}
+
+/*入力画面の背景色*/
+.inputArea{
+	background-color: #f7f7f7;
+}
+
+/*入力欄の中央揃え*/
+.textbox{
+	text-align: center;
+	padding: 35px;
+}
+
+	/*入力欄の枠*/
+	.input{
+	border: 2px #f1a36e solid;
+	border-radius: 5px;
+	height: 30px;
+	width: 60%;
+	}
+
+/*ログインボタン*/
+.buttonArea{
+	text-align: center;
+	padding: 30px;
+}
+
+	/*ログインボタンの中身*/
+	input[type="submit"]{
+		background-color: #f19d64;
+		color: #ffffff;
+		border: 2px #f1a36e solid;
+		border-radius: 5px;
+		width: 45%;
+		height: 40px;
+		font-size: large;
+	}
+
+/*エラーメッセージ*/
+.errorMsg{
+	text-align: center;
+	color: red;
+	margin: 0px;
+	padding: 5px;
+}
+
+/*フッター*/
+/*線*/
+footer{
+	border-top: 1px #f1a36e solid;
+}
+	/*テキスト*/
+	.footerText{
+		text-align: center;
+		padding: 2%;
+	}
+		/*文字色*/
+		.footerLink{
+			color: #f1a36e;
+		}
+

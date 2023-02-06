@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- タイトル -->
+	<title>軽マスタ一覧</title>
+	<!-- エンコード -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="'..' + @{/css/list.css}" />
+</head>
+<body>
+	<header>
+		<h2>軽マスタ一覧</h2>
+	</header>
+
+	<section id="mainContents">
+		<!-- ボタン -->
+		<section class="button_area">
+			<input type="button" value="戻る" class="btn">
+			<input type="button" onclick="location.href='createmaster'" value="追加" 　class="btn">
+		</section>
+		<!-- 表 -->
+		<section class="chart">
+			<table>
+				<thead class="tableHeader">
+					<tr>
+						<th class="delete">削除</th>
+						<th class="name">技術名</th>
+						<th class="option">オプション</th>
+						<th class="empty">&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="mas : ${lists}">
+						<td th:text="'×'"></td>
+						<td th:text="${mas.name}"></td>
+						<td th:text="${mas.option_1}"></td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</section>
+</body>
+
+</html>
