@@ -71,9 +71,11 @@ public class Test2Controller {
 		
 		// インスタンス生成
 		Test2Class test2Class = new Test2Class();
+		test2Class.setInput_3("abcd");
 		// モデル設定
 		model.addAttribute("Test2Class", test2Class);
 		// 画面遷移
+
 		return PAGE_NAME;
 	}
 	
